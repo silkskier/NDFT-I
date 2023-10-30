@@ -2,7 +2,8 @@
 #include <complex>
 
 /*
-    A simple recursive implementation of 1-dimentional recursive Z-transform for 64-bit floats
+    A simple recursive implementation of 1-dimentional recursive NDFT-I for 64-bit floats. To reach full performance 
+compile with enabled SIMD instructions (-mavx or -mavx512 for modern x86 CPUs).
 */
 
 void rdzt1d(const double* x, const double* y, const int n, const int k, const double df, std::complex<double> *out, const double fmin){
